@@ -1,0 +1,12 @@
+# 生データ・キャッシュ・秘密は絶対にコミットしない
+cache/
+site/data/
+publish/repo/
+publish/.salt
+publish/.ex_sig_*
+.publish_pw
+PUBLISH.md
+state.enc
+*.log
+logs_*.txt
+__pycache__/
