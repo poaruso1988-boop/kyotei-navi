@@ -343,7 +343,7 @@ def main():
         for v, rec in zip([j[0] for j in jobs], ex.map(run, jobs)):
             v.setdefault("races", []).append(rec); done += 1
             if done % 12 == 0: print(f"  {done}/{len(jobs)} races ({time.time()-t0:.0f}s) {bhttp.STATS}", flush=True)
-    for v in venues: v["races"].sort(key=lambda r: r["rno"])
+    for v in venues: v.setdefault("races", []).sort(key=lambda r: r["rno"])  # 中止等で出走表(締切)が取れない場がある
     jdump({"hd": hd, "fetched_at": dt.datetime.now(JST).isoformat(timespec="seconds"), "venues": venues}, os.path.join(outdir, "_all.json"))
     print(f"done {time.time()-t0:.0f}s {bhttp.STATS} {stat if (a.intraday or a.ex_only) else ''} -> {outdir}/_all.json")
 
