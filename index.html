@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#0b1f3a">
+<meta name="robots" content="noindex, nofollow">
+<title>競艇ナビ – 出走表・予想・買い目</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="top-row">
+    <a class="brand" href="#" id="brand"><span class="logo">⛵</span>競艇ナビ</a>
+    <div class="datebox">
+      <button id="prevDay" aria-label="前日">‹</button>
+      <select id="dateSel" aria-label="日付"></select>
+      <button id="nextDay" aria-label="翌日">›</button>
+    </div>
+  </div>
+  <div class="crumbs" id="crumbs"></div>
+</header>
+<main id="app"><div class="loading">読み込み中…</div></main>
+<nav class="tabbar">
+  <a href="#" data-tab="picks" id="tab-picks"><span>★</span>おすすめ</a>
+  <a href="#" data-tab="venues" id="tab-venues"><span>▦</span>開催場</a>
+  <a href="#" data-tab="about" id="tab-about"><span>ⓘ</span>使い方</a>
+</nav>
+<script src="app.js"></script>
+</body>
+</html>
